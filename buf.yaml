@@ -1,0 +1,10 @@
+version: v1
+name: buf.build/angry-popcorn/connect-playground
+deps:
+  - buf.build/angry-popcorn/argo-workflows-apis
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT

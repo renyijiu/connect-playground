@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package proto.greet.v1;
+
+import "coscene/workflow/v1alpha1/workflow.proto";
+
+option go_package = "github.com/renyijiu/connect-playground/proto/greet/v1;greetv1";
+
+message GreetRequest {
+  string name = 1;
+}
+
+service GreetService {
+  rpc Greet(GreetRequest) returns (coscene.workflow.v1alpha1.WorkflowTemplate) {}
+}
